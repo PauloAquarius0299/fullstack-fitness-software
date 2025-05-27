@@ -5,10 +5,12 @@ import com.paulotech.userserver.dto.UserResponse;
 import com.paulotech.userserver.entity.User;
 import com.paulotech.userserver.repository.UserRepository;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
+@Slf4j
 public class UserService {
 
     private UserRepository userRepository;
@@ -53,6 +55,7 @@ public class UserService {
     }
 
     public Boolean existByUserId(String userId) {
+        log.info("Calling User validation API for userId: {}", userId);
         return userRepository.existsById(userId);
     }
 }
