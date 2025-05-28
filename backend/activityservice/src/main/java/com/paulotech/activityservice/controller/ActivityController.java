@@ -2,8 +2,10 @@ package com.paulotech.activityservice.controller;
 
 import com.paulotech.activityservice.dto.ActivityRequest;
 import com.paulotech.activityservice.dto.ActivityResponse;
+import com.paulotech.activityservice.exception.UserNotFoundException;
 import com.paulotech.activityservice.service.ActivityService;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
