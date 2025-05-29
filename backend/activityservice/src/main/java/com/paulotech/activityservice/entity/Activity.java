@@ -19,6 +19,7 @@ import java.util.Map;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Activity {
+    @Id
     private String id;
     private String userId;
     private ActivityType type;
