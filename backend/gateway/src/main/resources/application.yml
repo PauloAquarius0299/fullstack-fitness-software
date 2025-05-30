@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: userservice
+          uri: lib://USERSERVICE
+          predicates:
+                - Path=/api/users/**
+
+        - id: activityservice
+          uri: lib://ACTIVITYSERVICE
+          predicates:
+                - Path=/api/activities/**
+
+        - id: aiservice
+          uri: lib://AISERVICE
+          predicates:
+                - Path=/api/recommendations/**
+
+server:
+    port: 8081
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
