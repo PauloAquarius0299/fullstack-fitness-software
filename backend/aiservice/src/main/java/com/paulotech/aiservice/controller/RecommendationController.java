@@ -1,6 +1,6 @@
 package com.paulotech.aiservice.controller;
 
-import com.paulotech.aiservice.model.Recommendation;
+import com.paulotech.aiservice.entity.Recommendation;
 import com.paulotech.aiservice.service.RecommendationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

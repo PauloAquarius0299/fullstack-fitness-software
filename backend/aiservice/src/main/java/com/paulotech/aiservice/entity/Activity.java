@@ -1,4 +1,4 @@
-package com.paulotech.aiservice.model;
+package com.paulotech.aiservice.entity;
 
 import lombok.Data;
 
@@ -9,6 +9,7 @@ import java.util.Map;
 public class Activity {
     private String id;
     private String userId;
+    private String type;
     private Integer duration;
     private Integer caloriesBurned;
     private LocalDateTime startTime;

@@ -1,4 +1,4 @@
-package com.paulotech.aiservice.model;
+package com.paulotech.aiservice.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

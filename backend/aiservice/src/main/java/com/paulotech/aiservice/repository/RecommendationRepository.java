@@ -1,6 +1,6 @@
 package com.paulotech.aiservice.repository;
 
-import com.paulotech.aiservice.model.Recommendation;
+import com.paulotech.aiservice.entity.Recommendation;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

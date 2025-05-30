@@ -1,6 +1,6 @@
 package com.paulotech.aiservice.service;
 
-import com.paulotech.aiservice.model.Recommendation;
+import com.paulotech.aiservice.entity.Recommendation;
 import com.paulotech.aiservice.repository.RecommendationRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
