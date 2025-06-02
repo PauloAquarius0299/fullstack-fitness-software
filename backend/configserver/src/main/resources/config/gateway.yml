@@ -5,30 +5,27 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8080/realms/fitness-oauth2
-          jwk-set-uri: http://localhost:8080/realms/fitness-oauth2/protocol/openid-connect/certs
-  config:
-    import: optional:configserver:http://localhost:8888
+          jwk-set-uri: http://localhost:8181/auth/realms/springboot-jwt-realm/protocol/openid-connect/certs
   cloud:
     gateway:
       routes:
         - id: userservice
           uri: lib://USERSERVICE
           predicates:
-            - Path=/api/users/**
+                - Path=/api/users/**
 
         - id: activityservice
           uri: lib://ACTIVITYSERVICE
           predicates:
-            - Path=/api/activities/**
+                - Path=/api/activities/**
 
         - id: aiservice
           uri: lib://AISERVICE
           predicates:
-            - Path=/api/recommendations/**
+                - Path=/api/recommendations/**
 
 server:
-  port: 8081
+    port: 8081
 
 eureka:
   client:
