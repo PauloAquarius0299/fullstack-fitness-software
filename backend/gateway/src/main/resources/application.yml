@@ -5,8 +5,8 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8080/realms/fitness-oauth2
-          jwk-set-uri: http://localhost:8080/realms/fitness-oauth2/protocol/openid-connect/certs
+          issuer-uri: http://localhost:8080/realms/fitness-oauth2-auth
+          jwk-set-uri: http://localhost:8080/realms/fitness-oauth2-auth/protocol/openid-connect/certs
   config:
     import: optional:configserver:http://localhost:8888
   cloud:
