@@ -31,6 +31,8 @@ public class KeycloakUserSyncFilter implements WebFilter {
 //        }
 
         if (userId != null && token != null) {
+            String finalUserId = userId;
+            String finalUserId1 = userId;
             return userService.validateUser(userId)
                     .flatMap(exists -> {
                         if (!exists) {

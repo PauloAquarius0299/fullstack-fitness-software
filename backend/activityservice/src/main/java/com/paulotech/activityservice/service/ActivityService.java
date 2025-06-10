@@ -29,7 +29,7 @@ public class ActivityService {
     private String routingKey;
 
     public ActivityResponse trackActivity(ActivityRequest activityRequest) {
-//        boolean isValidUser = userValidationService.validateUser(activityRequest.getUserId());
+        boolean isValidUser = userValidationService.validateUser(activityRequest.getUserId());
 //        if(!isValidUser) {
 //            throw new UserNotFoundException("Invalid User" + activityRequest.getUserId());
 //        }

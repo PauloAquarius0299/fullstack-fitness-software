@@ -7,23 +7,22 @@ spring:
         jwt:
           issuer-uri: http://localhost:8080/realms/fitness-oauth2-auth
           jwk-set-uri: http://localhost:8080/realms/fitness-oauth2-auth/protocol/openid-connect/certs
-  config:
-    import: optional:configserver:http://localhost:8888
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true  # Habilita descoberta automática de serviços
       routes:
-        - id: userservice
-          uri: lib://USERSERVICE
+        - id: userserver
+          uri: lb://USERSERVER
           predicates:
             - Path=/api/users/**
-
         - id: activityservice
-          uri: lib://ACTIVITYSERVICE
+          uri: lb://ACTIVITYSERVICE
           predicates:
             - Path=/api/activities/**
-
         - id: aiservice
-          uri: lib://AISERVICE
+          uri: lb://AISERVICE
           predicates:
             - Path=/api/recommendations/**
 
@@ -32,5 +31,10 @@ server:
 
 eureka:
   client:
+    registerWithEureka: true
+    fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    preferIpAddress: true

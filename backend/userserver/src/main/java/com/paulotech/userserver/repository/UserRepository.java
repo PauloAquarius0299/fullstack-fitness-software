@@ -11,8 +11,8 @@ public interface UserRepository extends JpaRepository<User, String> {
     @Query("SELECT CASE WHEN COUNT(u) > 0 THEN true ELSE false END FROM User u WHERE u.email = :email")
     boolean existingEmail(@Param("email") String email);
 
-    // Corrected method - either use this naming convention:
-    boolean existsByKeycloakId(String keycloakId);;
+
+    boolean existsByKeycloakId(String keycloakId);
 
 
     User findByEmail(String email);
