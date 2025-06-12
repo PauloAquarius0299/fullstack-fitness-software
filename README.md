@@ -5,23 +5,23 @@ Este projeto é uma aplicação de eCommerce construída com uma arquitetura de 
 ###  Etapas de Desenvolvimento
 🔧 Backend
 
- User Service
+User Service
 * Configuração do serviço e banco de dados
 * Criação dos endpoints REST
-* Activity Service
+Activity Service
 * Configuração do serviço e banco de dados
 * Comunicação com User Service via REST e RabbitMQ
 
 AI Service
 * Geração de recomendações com base nas atividades
 * Integração com API externa (Gemini)
-* Eureka Server
+Eureka Server
 * Registro e descoberta de microserviços
 * RabbitMQ
 * Comunicação assíncrona entre serviços
-* Config Server
+Config Server
 * Centralização das configurações dos serviços
-* API Gateway
+API Gateway
 * Roteamento de requisições para os serviços
 
 Keycloak
