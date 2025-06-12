@@ -15,12 +15,15 @@ Activity Service
 AI Service
 * Geração de recomendações com base nas atividades
 * Integração com API externa (Gemini)
+
 Eureka Server
 * Registro e descoberta de microserviços
 * RabbitMQ
 * Comunicação assíncrona entre serviços
+
 Config Server
 * Centralização das configurações dos serviços
+
 API Gateway
 * Roteamento de requisições para os serviços
 
